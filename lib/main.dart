@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         'producto' : (_) => ProductoPage(),
       },
       theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 233, 231, 231),
+        scaffoldBackgroundColor: Color.fromARGB(255, 223, 249, 246),
         appBarTheme: AppBarTheme(
           color: Color.fromARGB(255, 25, 0, 255),
           elevation: 0,

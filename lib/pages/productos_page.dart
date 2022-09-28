@@ -46,7 +46,13 @@ class ProductoPage extends StatelessWidget {
               ],
             ),
           ),
-        )
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(
+            Icons.save_outlined
+          ),
+          onPressed: () {},
+        ),
     );
   }
 }
@@ -59,8 +65,9 @@ class _ProductoForm extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 10),
       child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20),
         width: double.infinity,
-        height: 200,
+        //height: 200,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.only(
@@ -74,6 +81,62 @@ class _ProductoForm extends StatelessWidget {
               offset: Offset(0,5),
             ),
           ],
+        ),
+        child: Form(
+          child: Column(
+            children: [
+              SizedBox(height: 10,),
+              TextFormField(
+                decoration: InputDecoration(
+                  hintText: 'Nombre del Producto',
+                  labelText: 'Nombre del Producto',
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 2, 226, 255),
+                    ),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 2, 226, 255),
+                      width: 2,
+                    ),
+                  ),
+                  labelStyle: TextStyle(
+                    color: Color.fromARGB(255, 8, 3, 156),
+                  ),
+                ),
+              ),
+              SizedBox(height: 15,),
+               TextFormField(
+                decoration: InputDecoration(
+                  hintText: '\$99.99',
+                  labelText: 'Precio',
+                  enabledBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 2, 226, 255),
+                    ),
+                  ),
+                  focusedBorder: UnderlineInputBorder(
+                    borderSide: BorderSide(
+                      color: Color.fromARGB(255, 2, 226, 255),
+                      width: 2,
+                    ),
+                  ),
+                  labelStyle: TextStyle(
+                    color: Color.fromARGB(255, 8, 3, 156),
+                  ),
+                ),
+              ),
+              SizedBox(height: 15,),
+              SwitchListTile(
+                value: true,
+                title: Text('Disponible'),
+                activeColor: Color.fromARGB(255, 0, 21, 254),
+                onChanged: (value) {},
+              ),
+              SizedBox(height: 15,),
+            ],
+          ),
         ),
       ),
     );
